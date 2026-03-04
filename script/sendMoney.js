@@ -10,6 +10,15 @@ document.getElementById('send-moneyBtn').addEventListener('click', function () {
   //2 - get the send money amount
   const sendMoneyAmount = getValueFromInput('send-money-amount');
 
+  if (
+    sendMoneyAmount === '' ||
+    sendMoneyAmount <= 0 ||
+    isNaN(sendMoneyAmount)
+  ) {
+    alert('Invalid Amount');
+    return;
+  }
+
   //3 - get the current Balance
   const currentBalance = getBalance();
 

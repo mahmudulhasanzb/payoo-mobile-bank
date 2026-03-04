@@ -16,13 +16,13 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-  
+
   <header class="border-b-2 border-base-300 sticky top-0 z-50 bg-base-500 backdrop-blur">
     <section class="w-11/12 mx-auto py-5 flex justify-between">
 
@@ -38,46 +38,54 @@
 
 
       <div class="right">
-        <a class="btn btn-primary flex items-center gap-2" href="./index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+        <a class="btn btn-primary flex items-center gap-2" href="./index.html"><i
+            class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
       </div>
 
     </section>
   </header>
 
   <section class="w-11/12 mx-auto space-y-4 py-5">
-    <h2 class="text-2xl font-bold">Welcome to Pay<span id="balance" class="text-primary">oo</span> </h2>
-    <p class="text-sm font-medium text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low</p>
-    
+    <h2 class="text-2xl font-bold">Welcome to Pay<span class="text-primary">oo</span> </h2>
+    <p class="text-sm font-medium text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is
+      low</p>
+
     <div class="buttons grid grid-cols-3 gap-3">
 
-      <button onclick="showOnly('addMoneySection')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('addMoneySection')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-1.png">
         <p class="text-sm font-bold">Add Money</p>
       </button>
 
-      <button onclick="showOnly('cashoutSection')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('cashoutSection')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-2.png">
         <p class="text-sm font-bold">Cashout</p>
       </button>
 
-      <button onclick="showOnly('sendMoneySection')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('sendMoneySection')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-3.png">
         <p class="text-sm font-bold">Send Money</p>
       </button>
 
-      <button onclick="showOnly('getBonusSection')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('getBonusSection')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-4.png">
         <p class="text-sm font-bold">Get Bonus</p>
       </button>
 
-      <button onclick="showOnly('payBillSection')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('payBillSection')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-5.png">
         <p class="text-sm font-bold">Pay Bill</p>
       </button>
 
-      <button onclick="showOnly('history')" class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
+      <button onclick="showOnly('history')"
+        class="btn btn-primary btn-soft flex flex-col h-full w-full py-4 items-center gap-2">
         <img src="./assets/opt-6.png">
-        <p class="text-sm font-bold">Tranjaction</p>
+        <p class="text-sm font-bold">Transaction</p>
       </button>
 
     </div>
@@ -85,100 +93,104 @@
 
   <section id="addMoneySection" class="w-11/12 mx-auto py-5 ">
     <h2 class="text-2xl font-bold mb-5">Add Money</h2>
-        <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <select id="add-money-bank" class="select rounded-full bg-gray-200 w-full">
-                <option disabled selected>Select A Bank</option>
-                <option>Brack Bank</option>
-                <option>City Bank</option>
-                <option>Islami Bank</option>
-              </select>
+    <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <select id="add-money-bank" class="select rounded-full bg-gray-200 w-full">
+            <option disabled selected>Select A Bank</option>
+            <option>Brack Bank</option>
+            <option>City Bank</option>
+            <option>Islami Bank</option>
+          </select>
 
-              <br>
+          <br>
 
-              <label class="label text-sm font-bold">Bank Account Number</label>
-              <input id="add-money-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11" required type="number"  
-                placeholder="Enter 11 digit account number"/>
+          <label class="label text-sm font-bold">Bank Account Number</label>
+          <input id="add-money-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11"
+            required type="number" placeholder="Enter 11 digit account number" />
 
-              <br>
-              
-              <label class="label text-sm font-bold">Amount to Add</label>
-              <input id="add-money-amount" type="number" class="input rounded-full bg-gray-200 w-full"
-                placeholder="Enter amount to add"/>
-        
-              <br>
-        
-              <label class="label text-sm font-bold">Pin Number</label>
-              <input id="add-money-pin" type="password" class="input rounded-full bg-gray-200 w-full" placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
-              <button id="add-moneyBtn" class="btn btn-primary mt-4">Add Money</button>
-            </fieldset>
-          </div>
-        </div>
+          <br>
+
+          <label class="label text-sm font-bold">Amount to Add</label>
+          <input id="add-money-amount" type="number" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter amount to add" />
+
+          <br>
+
+          <label class="label text-sm font-bold">Pin Number</label>
+          <input id="add-money-pin" type="password" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
+          <button id="add-moneyBtn" class="btn btn-primary mt-4">Add Money</button>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <section id="cashoutSection" class="w-11/12 mx-auto py-5 hidden">
     <h2 class="text-2xl font-bold mb-5">Cashout</h2>
-        <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <label class="label text-sm font-bold">Agent Number</label>
-              <input id="cashout-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11" required type="number"  
-                placeholder="Enter 11 digit number"/>
+    <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-sm font-bold">Agent Number</label>
+          <input id="cashout-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11"
+            required type="number" placeholder="Enter 11 digit number" />
 
-              <br>
-              
-              <label class="label text-sm font-bold">Amount</label>
-              <input id="cashout-amount" type="number" class="input rounded-full bg-gray-200 w-full"
-                placeholder="Enter amount"/>
-        
-              <br>
-        
-              <label class="label text-sm font-bold">Pin Number</label>
-              <input id="cashout-pin" type="password" class="input rounded-full bg-gray-200 w-full" placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
-              <button id="cashoutBtn" class="btn btn-primary mt-4">Cashout</button>
-            </fieldset>
-          </div>
-        </div>
+          <br>
+
+          <label class="label text-sm font-bold">Amount</label>
+          <input id="cashout-amount" type="number" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter amount" />
+
+          <br>
+
+          <label class="label text-sm font-bold">Pin Number</label>
+          <input id="cashout-pin" type="password" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
+          <button id="cashoutBtn" class="btn btn-primary mt-4">Cashout</button>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <section id="sendMoneySection" class="w-11/12 mx-auto py-5 hidden">
     <h2 class="text-2xl font-bold mb-5">Send Money</h2>
-        <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <label class="label text-sm font-bold">Agent Number</label>
-              <input id="send-money-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11" required type="number"  
-                placeholder="Enter 11 digit number"/>
+    <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-sm font-bold">Agent Number</label>
+          <input id="send-money-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11"
+            required type="number" placeholder="Enter 11 digit number" />
 
-              <br>
-              
-              <label class="label text-sm font-bold">Amount</label>
-              <input id="send-money-amount" type="number" class="input rounded-full bg-gray-200 w-full"
-                placeholder="Enter amount"/>
-        
-              <br>
-        
-              <label class="label text-sm font-bold">Password</label>
-              <input id="send-money-pin" type="password" class="input rounded-full bg-gray-200 w-full" placeholder="1234" maxlength="4" minlength="4" required />
-              <div class="flex justify-start"><a class="link link-hover text-primary">Forgot password?</a></div>
-              <button id="send-moneyBtn" class="btn btn-primary mt-4">Send Money</button>
-            </fieldset>
-          </div>
-        </div>
+          <br>
+
+          <label class="label text-sm font-bold">Amount</label>
+          <input id="send-money-amount" type="number" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter amount" />
+
+          <br>
+
+          <label class="label text-sm font-bold">Password</label>
+          <input id="send-money-pin" type="password" class="input rounded-full bg-gray-200 w-full" placeholder="1234"
+            maxlength="4" minlength="4" required />
+          <div class="flex justify-start"><a class="link link-hover text-primary">Forgot password?</a></div>
+          <button id="send-moneyBtn" class="btn btn-primary mt-4">Send Money</button>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <section id="getBonusSection" class="w-11/12 mx-auto py-5 hidden">
     <h2 class="text-2xl font-bold mb-5">Get Bonus</h2>
-        <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <label class="label text-sm font-bold">Cupon Code</label>
-              <input id="cupon-code" type="text" class="input rounded-full bg-gray-200 w-full" placeholder="Enter cupon code" maxlength="6" minlength="6" required />
-              <button id="get-bonusBtn" class="btn btn-primary mt-4">Get Bonus</button>
-            </fieldset>
-          </div>
-        </div>
+    <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-sm font-bold">Cupon Code</label>
+          <input id="cupon-code" type="text" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter cupon code" maxlength="6" minlength="6" required />
+          <button id="get-bonusBtn" class="btn btn-primary mt-4">Get Bonus</button>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <section id="history" class="w-11/12 mx-auto py-5 hidden">
@@ -190,37 +202,38 @@
 
   <section id="payBillSection" class="w-11/12 mx-auto py-5 hidden">
     <h2 class="text-2xl font-bold mb-5">Pay Bill</h2>
-        <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
-          <div class="card-body">
-            <fieldset class="fieldset">
-              <label class="label text-sm font-bold">Service</label>
-              <select id="pay-bill-service" class="select rounded-full bg-gray-200 w-full">
-                <option disabled selected>Select A Service</option>
-                <option>Electricity</option>
-                <option>Water</option>
-                <option>Gas</option>
-              </select>
+    <div class="card bg-base-100 w-full shrink-0 shadow-sm mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-sm font-bold">Service</label>
+          <select id="pay-bill-service" class="select rounded-full bg-gray-200 w-full">
+            <option disabled selected>Select A Service</option>
+            <option>Electricity</option>
+            <option>Water</option>
+            <option>Gas</option>
+          </select>
 
-              <br>
+          <br>
 
-              <label class="label text-sm font-bold">Account Number</label>
-              <input id="pay-bill-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11" required type="number"  
-                placeholder="Enter 11 digit number" />
-              
-              <br>
-              
-              <label class="label text-sm font-bold">Amount</label>
-              <input id="pay-bill-amount" type="number" class="input rounded-full bg-gray-200 w-full"
-                placeholder="Enter amount"/>
-        
-              <br>
-        
-              <label class="label text-sm font-bold">Pin Number</label>
-              <input id="pay-bill-pin" type="number" class="input rounded-full bg-gray-200 w-full" placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
-              <button id="pay-billBtn" class="btn btn-primary mt-4">Pay Bill</button>
-            </fieldset>
-          </div>
-        </div>
+          <label class="label text-sm font-bold">Account Number</label>
+          <input id="pay-bill-number" class="input rounded-full bg-gray-200 w-full" maxlength="11" minlength="11"
+            required type="number" placeholder="Enter 11 digit number" />
+
+          <br>
+
+          <label class="label text-sm font-bold">Amount</label>
+          <input id="pay-bill-amount" type="number" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter amount" />
+
+          <br>
+
+          <label class="label text-sm font-bold">Pin Number</label>
+          <input id="pay-bill-pin" type="number" class="input rounded-full bg-gray-200 w-full"
+            placeholder="Enter 4 digit pin number" maxlength="4" minlength="4" required />
+          <button id="pay-billBtn" class="btn btn-primary mt-4">Pay Bill</button>
+        </fieldset>
+      </div>
+    </div>
   </section>
 
   <script src="./script/machine.js"></script>
@@ -230,4 +243,5 @@
   <script src="./script/getBonus.js"></script>
   <script src="./script/payBill.js"></script>
 </body>
+
 </html>

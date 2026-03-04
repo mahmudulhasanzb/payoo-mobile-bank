@@ -1,13 +1,12 @@
 document.getElementById('pay-billBtn').addEventListener('click', function () {
+  //1 - get the bank account
+  const service = getValueFromInput('pay-bill-service');
 
-   //1 - get the bank account 
-    const service = getValueFromInput('pay-bill-service');
-    
-    //1-1 if the bank account is not selected show an error message
-    if (service === 'Select A Service') {
-      alert('Please select a service');
-      return;
-    }
+  //1-1 if the bank account is not selected show an error message
+  if (service === 'Select A Service') {
+    alert('Please select a service');
+    return;
+  }
 
   //1 - get the pay bill number & validate
   const payBillNumber = getValueFromInput('pay-bill-number');
@@ -19,6 +18,11 @@ document.getElementById('pay-billBtn').addEventListener('click', function () {
 
   //2 - get the pay bill amount
   const payBillAmount = getValueFromInput('pay-bill-amount');
+
+  if (payBillAmount === '' || payBillAmount <= 0 || isNaN(payBillAmount)) {
+    alert('Invalid Amount');
+    return;
+  }
 
   //3 - get the current Balance
   const currentBalance = getBalance();

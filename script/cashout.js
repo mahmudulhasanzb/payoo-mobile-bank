@@ -1,4 +1,4 @@
-document.getElementById("cashoutBtn").addEventListener('click', function () {
+document.getElementById('cashoutBtn').addEventListener('click', function () {
   //1 - get the agent number & validate
   const cashoutNumber = getValueFromInput('cashout-number');
   // 1- 1 if cashoutNumber is not equal to 11 digit > show an alert
@@ -9,6 +9,11 @@ document.getElementById("cashoutBtn").addEventListener('click', function () {
 
   //2 - get the cashout amount
   const cashoutAmount = getValueFromInput('cashout-amount');
+
+  if (cashoutAmount === '' || cashoutAmount <= 0 || isNaN(cashoutAmount)) {
+    alert('Invalid Amount');
+    return;
+  }
 
   //3 - get the current Balance
   const currentBalance = getBalance();
@@ -47,16 +52,12 @@ document.getElementById("cashoutBtn").addEventListener('click', function () {
 
     //4 - append the new div to the history container
     history.append(newHistory);
-
   } else {
     //5 - 2 false:: show an error alert > return
     alert('Incorrect Pin');
     return;
   }
-})
-
-
- 
+});
 
 // document.getElementById("cashoutBtn").addEventListener('click', function () {
 //   //1 - get the agent number & validate
